@@ -45,3 +45,19 @@ boutonFiltrer.addEventListener("click", function () {
      console.log(piecesFiltrees);
 
 });
+
+const boutonFiltrerDescription = document.querySelector(".btn-filtrer-description");
+
+boutonFiltrerDescription.addEventListener("click", function () {
+    const piecesFiltrees = pieces.filter(function (piece) {
+        return piece.description !== undefined;
+     });
+     console.log(piecesFiltrees);
+});
+
+const boutonTrierDecroissant = document.querySelector(".btn-trier-decroissant");
+boutonTrierDecroissant.addEventListener("click", function () {
+    const piecesReordonnees = Array.from(pieces);
+    piecesReordonnees.sort(function(a,b){return b.prix - a.prix})
+    console.log(piecesReordonnees)
+});
