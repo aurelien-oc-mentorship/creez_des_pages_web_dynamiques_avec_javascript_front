@@ -26,3 +26,22 @@ for(let index = 0; index < pieces.length ; index++){
     pieceElement.appendChild(descriptionElement);
     pieceElement.appendChild(disponibleElement);
 }
+
+const boutonTrier = document.querySelector(".btn-trier");
+
+boutonTrier.addEventListener("click", function () {
+    const piecesReordonnees = Array.from(pieces);
+    piecesReordonnees.sort(function(a,b){return a.prix - b.prix})
+    console.log(piecesReordonnees)
+
+});
+
+const boutonFiltrer = document.querySelector(".btn-filtrer");
+
+boutonFiltrer.addEventListener("click", function () {
+    const piecesFiltrees = pieces.filter(function (piece) {
+        return piece.prix <= 35;
+     });
+     console.log(piecesFiltrees);
+
+});
