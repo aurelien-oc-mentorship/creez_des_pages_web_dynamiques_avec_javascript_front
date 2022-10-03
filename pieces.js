@@ -2,6 +2,7 @@ import pieces from "./pieces-autos.js";
 
 for(let index = 0; index < pieces.length ; index++){
     const article = pieces[index];
+    const pieceElement = document.createElement('article');
     const imageElement = document.createElement("img");
     imageElement.src = article.image;
     const nomElement = document.createElement("h2");
@@ -16,7 +17,7 @@ for(let index = 0; index < pieces.length ; index++){
     disponibleElement.innerText = article.disponibilite ? "En stock" : "Rupture de stock";
     
     const sectionFiches = document.querySelector(".fiches");
-    const pieceElement = document.createElement('article');
+    
     sectionFiches.appendChild(pieceElement)
     pieceElement.appendChild(imageElement);
     pieceElement.appendChild(nomElement);
