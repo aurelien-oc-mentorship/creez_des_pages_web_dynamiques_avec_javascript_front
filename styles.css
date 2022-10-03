@@ -41,10 +41,13 @@ main {
 .filtres h3 {
 	text-align: center;
 }
-
 .fiches {
-	flex: 1;
+	display: flex;
+	flex-wrap: wrap;
+}
+.fiches article{
 	margin: 8px;
+	width: 250px;
 }
 .fiches img {
 	max-width: 200px;
