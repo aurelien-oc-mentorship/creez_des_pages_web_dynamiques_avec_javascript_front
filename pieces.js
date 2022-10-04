@@ -40,7 +40,6 @@ boutonTrier.addEventListener("click", function () {
 
 const boutonFiltrer = document.querySelector(".btn-filtrer");
 
-// OPTION 2
 boutonFiltrer.addEventListener("click", function () {
     const noms = pieces.map(piece => piece.nom); 
     //boucle for de la fin vers le début
@@ -65,7 +64,6 @@ boutonFiltrer.addEventListener("click", function () {
         .appendChild(pElement)
         .appendChild(abordablesElements)
 });
-*/
 
 const boutonFiltrerDescription = document.querySelector(".btn-filtrer-description");
 
